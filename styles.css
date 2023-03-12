@@ -41,7 +41,7 @@ body {
   text-align: center;
   padding: 20px;
   border: 1px solid black;
-  border-top: none;
+  border-bottom: none;
   border-left: none;
   border-right: none;
   cursor: pointer;
@@ -53,18 +53,16 @@ body {
 .accordion-item__content {
   padding: 20px;
   text-align: center;
-  border: 1px solid black;
-  border-top: none;
-  border-left: none;
-  border-right: none;
   display: none;
 }
 
-.accordion-item__input:checked ~ .accordion-item__trigger h2 {
+.accordion-item__input:hover ~ .accordion-item__trigger h2 {
   color: bisque;
 }
-.accordion-item__input:checked ~ .accordion-item__trigger .plus {
-  background-color: bisque;
+.accordion-item__input:hover ~ .accordion-item__trigger .plus {
+  border-style: solid;
+  border-width: 0 5px 8px 5px;
+  border-color: transparent transparent bisque transparent;
 }
 
 .accordion-item__input:checked ~ .accordion-item__content {
@@ -84,13 +82,11 @@ h2 {
 }
 
 .plus {
+  content: "";
   position: relative;
-  border: 1px dotted #C1CAD6;
-  width: 3px;
-  height: 3px;
-  background-color: black;
-  box-sizing: border-box;
-  transform: scale(5);
+  border-style: solid;
+  border-width: 8px 5px 0 5px;
+  border-color: black transparent transparent transparent;
   margin: auto;
   margin-right: 20px;
 }/*# sourceMappingURL=styles.css.map */

@@ -36,7 +36,7 @@ body {
     text-align: center; 
     padding: 20px;
     border: 1px solid black;
-    border-top: none;
+    border-bottom: none;
     border-left: none;
     border-right: none;
     cursor: pointer;
@@ -48,20 +48,17 @@ body {
 .accordion-item__content {
     padding: 20px;
     text-align: center;
-    border: 1px solid black;
-    border-top: none;
-    border-left: none;
-    border-right: none;
     display: none;
 }
-.accordion-item__input:checked ~ .accordion-item__trigger {
+.accordion-item__input:hover ~ .accordion-item__trigger {
     h2 {
         color: bisque;
     }
     .plus {
-        background-color: bisque;
+        border-style: solid;
+        border-width: 0 5px 8px 5px;
+        border-color: transparent transparent bisque transparent;
     }
-
 }
 .accordion-item__input:checked ~ .accordion-item__content {
     display: block;
@@ -78,13 +75,12 @@ h2 {
     color: black;
 }
 .plus {
+    content: "";
     position:relative;
-    border: 1px dotted #C1CAD6;
-    width: 3px;
-    height: 3px;
-    background-color: black;
-    box-sizing: border-box;
-    transform: scale(5);
+    border-style: solid;
+    border-width: 8px 5px 0 5px;
+    border-color: black transparent transparent transparent;
     margin: auto;
+
     margin-right: 20px;
 }
