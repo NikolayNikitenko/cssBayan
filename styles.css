@@ -20,6 +20,16 @@ body {
   cursor: pointer;
 }
 
+.accordion:hover h2 {
+  color: bisque;
+  transition: 0.2s;
+}
+
+.accordion:hover .plus {
+  border-color: bisque transparent transparent transparent;
+  transition: 0.2s;
+}
+
 .title {
   text-align: center;
 }
@@ -44,35 +54,38 @@ body {
   border-right: none;
   cursor: pointer;
 }
-.accordion-item__trigger:hover {
-  color: bisque;
-}
 
 .accordion-item__content {
-  padding: 20px;
   text-align: center;
   display: none;
 }
 
-.accordion-item__input:hover ~ .accordion-item__trigger h2 {
-  color: bisque;
-}
 .accordion-item__input:hover ~ .accordion-item__trigger .plus {
   border-style: solid;
   border-width: 0 5px 8px 5px;
   border-color: transparent transparent bisque transparent;
 }
 
-.accordion-item__input:hover ~ .accordion-item__content {
-  display: block;
-}
-.accordion-item__input:hover ~ .accordion-item__content:hover {
-  color: bisque;
+.accordion-item__input:active ~ .accordion-item__trigger h2 {
+  color: black;
 }
 
-.img {
-  width: 250px;
-  height: 305px;
+.accordion-item__input:active ~ .accordion-item__trigger .plus {
+  border-color: transparent transparent black transparent;
+}
+
+.accordion-item__input:checked ~ .accordion-item__content {
+  display: block;
+}
+
+.accordion-item__input:hover ~ .accordion-item__content {
+  display: block;
+  animation: show-image 1s forwards;
+}
+
+.mem {
+  width: 125px;
+  height: 150px;
 }
 
 h2 {
