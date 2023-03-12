@@ -37,5 +37,11 @@ body {
     padding: 20px;
     border: 1px solid #f034f0;
     border-top: none;
+    border-left: none;
+    border-right: none;
     display: none;
+}
+.accordion-item__input:checked ~ .accordion-item__trigger {}
+.accordion-item__input:checked ~ .accordion-item__content {
+    display: block;
 }
