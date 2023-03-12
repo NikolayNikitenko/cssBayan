@@ -17,6 +17,7 @@ body {
 
 // === Аккордион ===
 .accordion {
+    cursor: pointer;
 }
 .accordion-item {
     position: relative;
@@ -27,11 +28,13 @@ body {
 }
 .accordion-item__trigger {
     display: block;
+    text-align: center; 
     padding: 20px;
     border: 1px solid #f034f0;
     border-top: none;
     border-left: none;
     border-right: none;
+    cursor: pointer;
 }
 .accordion-item__content {
     padding: 20px;
