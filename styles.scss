@@ -8,8 +8,8 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     padding: 0;
+    background-color: #C1CAD6;
 }
-
 .wrapper {
     max-width: 1000px;
     margin: 0 auto;
@@ -17,7 +17,11 @@ body {
 
 // === Аккордион ===
 .accordion {
+    background-color: #C1CAD6;
     cursor: pointer;
+}
+.title {
+    text-align: center;
 }
 .accordion-item {
     position: relative;
@@ -27,24 +31,60 @@ body {
     appearance: none
 }
 .accordion-item__trigger {
-    display: block;
+    display: flex;
+    justify-content: space-between;
     text-align: center; 
     padding: 20px;
-    border: 1px solid #f034f0;
+    border: 1px solid black;
     border-top: none;
     border-left: none;
     border-right: none;
     cursor: pointer;
+    
+    &:hover {
+        color: bisque;
+    }
 }
 .accordion-item__content {
     padding: 20px;
-    border: 1px solid #f034f0;
+    text-align: center;
+    border: 1px solid black;
     border-top: none;
     border-left: none;
     border-right: none;
     display: none;
 }
-.accordion-item__input:checked ~ .accordion-item__trigger {}
+.accordion-item__input:checked ~ .accordion-item__trigger {
+    h2 {
+        color: bisque;
+    }
+    .plus {
+        background-color: bisque;
+    }
+
+}
 .accordion-item__input:checked ~ .accordion-item__content {
     display: block;
+    
+    &:hover {
+        color: bisque;
+    }
+}
+.img {
+    width: 500px;
+    height: 610px;
+}
+h2 {
+    color: black;
+}
+.plus {
+    position:relative;
+    border: 1px dotted #C1CAD6;
+    width: 3px;
+    height: 3px;
+    background-color: black;
+    box-sizing: border-box;
+    transform: scale(5);
+    margin: auto;
+    margin-right: 20px;
 }

@@ -7,6 +7,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   padding: 0;
+  background-color: #C1CAD6;
 }
 
 .wrapper {
@@ -15,7 +16,12 @@ body {
 }
 
 .accordion {
+  background-color: #C1CAD6;
   cursor: pointer;
+}
+
+.title {
+  text-align: center;
 }
 
 .accordion-item {
@@ -30,25 +36,61 @@ body {
 }
 
 .accordion-item__trigger {
-  display: block;
+  display: flex;
+  justify-content: space-between;
   text-align: center;
   padding: 20px;
-  border: 1px solid #f034f0;
+  border: 1px solid black;
   border-top: none;
   border-left: none;
   border-right: none;
   cursor: pointer;
 }
+.accordion-item__trigger:hover {
+  color: bisque;
+}
 
 .accordion-item__content {
   padding: 20px;
-  border: 1px solid #f034f0;
+  text-align: center;
+  border: 1px solid black;
   border-top: none;
   border-left: none;
   border-right: none;
   display: none;
 }
 
+.accordion-item__input:checked ~ .accordion-item__trigger h2 {
+  color: bisque;
+}
+.accordion-item__input:checked ~ .accordion-item__trigger .plus {
+  background-color: bisque;
+}
+
 .accordion-item__input:checked ~ .accordion-item__content {
   display: block;
+}
+.accordion-item__input:checked ~ .accordion-item__content:hover {
+  color: bisque;
+}
+
+.img {
+  width: 500px;
+  height: 610px;
+}
+
+h2 {
+  color: black;
+}
+
+.plus {
+  position: relative;
+  border: 1px dotted #C1CAD6;
+  width: 3px;
+  height: 3px;
+  background-color: black;
+  box-sizing: border-box;
+  transform: scale(5);
+  margin: auto;
+  margin-right: 20px;
 }/*# sourceMappingURL=styles.css.map */
