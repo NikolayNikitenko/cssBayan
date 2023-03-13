@@ -8,7 +8,6 @@ body {
     max-width: 800px;
     margin: 0 auto;
 }
-
 // === Аккордион ===
 .accordion {
     background-color: #C1CAD6;
@@ -91,7 +90,6 @@ h2 {
     .plus {
         border-width: 6px 4px 0 4px;
     }
-
     .accordion-item__input:hover ~ .accordion-item__trigger {
         .plus {
             border-width: 0 4px 6px 4px;
