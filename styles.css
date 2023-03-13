@@ -99,7 +99,7 @@ h2 {
   margin-right: 20px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   h2 {
     font-size: 16px;
   }
@@ -108,5 +108,16 @@ h2 {
   }
   .accordion-item__input:hover ~ .accordion-item__trigger .plus {
     border-width: 0 4px 6px 4px;
+  }
+}
+@media (max-width: 500px) {
+  h2 {
+    font-size: 14px;
+  }
+  .plus {
+    border-width: 5px 3px 0 3px;
+  }
+  .accordion-item__input:hover ~ .accordion-item__trigger .plus {
+    border-width: 0 3px 5px 3px;
   }
 }/*# sourceMappingURL=styles.css.map */
