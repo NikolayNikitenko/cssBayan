@@ -16,12 +16,13 @@ body {
 
 .accordion:hover h2 {
   color: bisque;
-  transition: 0.2s;
+  transition: 0.4s;
 }
 
 .accordion:hover .plus {
+  border-width: 8px 5px 0 5px;
   border-color: bisque transparent transparent transparent;
-  transition: 0.2s;
+  transition: 0.4s;
 }
 
 .title {
@@ -92,7 +93,7 @@ h2 {
   content: "";
   position: relative;
   border-style: solid;
-  border-width: 8px 5px 0 5px;
+  border-width: 0px 0px 0 0px;
   border-color: black transparent transparent transparent;
   margin: auto;
   margin-right: 20px;
