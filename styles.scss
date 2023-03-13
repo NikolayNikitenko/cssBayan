@@ -70,6 +70,7 @@ body {
     height: 150px;
 }
 h2 {
+    font-style: 20px;
     padding-left: 20px;
     color: black;
 }
@@ -82,4 +83,18 @@ h2 {
     margin: auto;
 
     margin-right: 20px;
+}
+@media (max-width:500px) {
+    h2 {
+        font-size: 16px;
+    }
+    .plus {
+        border-width: 6px 4px 0 4px;
+    }
+
+    .accordion-item__input:hover ~ .accordion-item__trigger {
+        .plus {
+            border-width: 0 4px 6px 4px;
+        }
+    }
 }
