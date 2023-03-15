@@ -5,7 +5,7 @@ body {
     background-color: #C1CAD6;
 }
 .wrapper {
-    max-width: 800px;
+    max-width: 50rem;
     margin: 0 auto;
 }
 // === Аккордион ===
@@ -18,7 +18,7 @@ body {
     transition: 0.4s;
 }
 .accordion:hover .plus {
-    border-width: 8px 5px 0 5px;
+    border-width: 0.5rem 0.3125rem 0 0.3125rem;
     border-color: bisque transparent transparent transparent;
     transition: 0.4s;
 }
@@ -34,17 +34,20 @@ body {
     display: flex;
     justify-content: space-between;
     text-align: center; 
-    border-top: 1px solid black;
+    border-top: 0,0625rem solid black;
     cursor: pointer;
+    transition: 1s all ease-in-out;
 }
 .accordion-item__content {
+    max-height: 0;
+    overflow: hidden;
     text-align: center;
-    display: none;
+    transition: 2s all ease-in-out;
 }
 .accordion-item__input:hover ~ .accordion-item__trigger {
     .plus {
         border-style: solid;
-        border-width: 0 5px 8px 5px;
+        border-width: 0 0.3125rem 0.5rem 0.3125rem;
         border-color: transparent transparent bisque transparent;
     }
 }
@@ -55,7 +58,7 @@ body {
     border-color: transparent transparent black transparent;
 }
 .accordion-item__input:checked ~ .accordion-item__content {
-    display: block;
+    max-height: 50%;
     animation: show-image 2s forwards;
 }
 .accordion-item__input:hover ~ .accordion-item__content {
@@ -63,46 +66,47 @@ body {
     animation: show-image 2s forwards;
 }
 .mem {
-    width: 125px;
-    height: 150px;
+    width: 7.8125rem;
+    height: 9.375rem;
+    transition: 2s;
 }
 h2 {
-    font-style: 20px;
-    padding-left: 20px;
+    font-style: 1.25rem;
+    padding-left: 1.25rem;
     color: black;
 }
 .plus {
     content: "";
     border-style: solid;
-    border-width: 0px 0px 0 0px;
+    border-width: 0;
     border-color: black transparent transparent transparent;
     margin: auto;
 
-    margin-right: 20px;
+    margin-right: 1.25rem;
 }
 @media (max-width:700px) {
     h2 {
-        font-size: 16px;
+        font-size: 1rem;
     }
     .plus {
-        border-width: 6px 4px 0 4px;
+        border-width: 6px 0.25rem 0 0.25rem;
     }
     .accordion-item__input:hover ~ .accordion-item__trigger {
         .plus {
-            border-width: 0 4px 6px 4px;
+            border-width: 0 0.25rem 6px 0.25rem;
         }
     }
 }
 @media (max-width:500px) {
     h2 {
-        font-size: 14px;
+        font-size: 0.875rem;
     }
     .plus {
-        border-width: 5px 3px 0 3px;
+        border-width: 0.3125rem 0.1875rem 0 0.1875rem;
     }
     .accordion-item__input:hover ~ .accordion-item__trigger {
         .plus {
-            border-width: 0 3px 5px 3px;
+            border-width: 0 0.1875rem 0.3125rem 0.1875rem;
         }
     }
 }
